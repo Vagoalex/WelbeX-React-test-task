@@ -1,9 +1,8 @@
 import { useCallback, useState } from 'react';
 
 export const useHttp = () => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [process, setProcess] = useState('waiting'); // default state
+  const [error, setError] = useState(null);
 
   const request = useCallback(
     async (
@@ -13,7 +12,6 @@ export const useHttp = () => {
       headers = { 'Content-Type': 'application/json' }
     ) => {
       // loading in fetching
-      setLoading(true);
       setProcess('loading');
 
       try {
@@ -24,13 +22,11 @@ export const useHttp = () => {
 
         const data = await response.json();
 
-        setLoading(false);
-        // setProcess('confirmed') in .then with promise in any file
+        // setProcess('confirmed'); // in .then with promise in any file
         return data;
       } catch (error) {
-        setLoading(false);
-        setError(error.message);
         setProcess('error'); // error fetching
+        console.log(error.message);
         throw error;
       }
     },
@@ -43,5 +39,5 @@ export const useHttp = () => {
     setProcess('loading'); // again loading state
   }, []);
 
-  return { request, clearError, loading, error, process, setProcess };
+  return { request, error, clearError, process, setProcess };
 };

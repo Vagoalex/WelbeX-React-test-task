@@ -1,34 +1,46 @@
+import ErrorMessage from './error-message/ErrorMessage';
+import Spinner from './spinner/Spinner';
 import './Table.scss';
 
-const Table = ({ someData }) => {
-  // const renderList = () => {
-  //   return someData.map((data) => (
-  //     <tr key={data.id}>
-  //       <td>{today}</td>
-  //       <td>{data.name}</td>
-  //       <td>{data.quantity}</td>
-  //       <td>{data.distance}</td>
-  //     </tr>
-  //   ));
-  // };
+const Table = ({ data, process }) => {
+  // eslint-disable-next-line default-case
+  switch (process) {
+    case 'loading':
+      return <Spinner />;
+    case 'error':
+      return <ErrorMessage />;
+    case 'confirmed':
+      const today = new Date().toISOString().slice(0, 10);
 
-  const list = renderList();
-
-  return (
-    <div className='table-container'>
-      <table className='table'>
-        <tbody>
-          <tr>
-            <th>Дата</th>
-            <th>Название</th>
-            <th>Количество</th>
-            <th>Расстояние</th>
+      const renderList = () => {
+        return data.map((item) => (
+          <tr key={item.id}>
+            <td className='table__item'>{today}</td>
+            <td className='table__item'>{item.name}</td>
+            <td className='table__item'>{item.quantity}</td>
+            <td className='table__item'>{item.distance}</td>
           </tr>
-          {/* {list} */}
-        </tbody>
-      </table>
-    </div>
-  );
+        ));
+      };
+
+      const list = renderList();
+
+      return (
+        <div className='table-container'>
+          <table className='table'>
+            <tbody>
+              <tr>
+                <th className='table__title'>Дата</th>
+                <th className='table__title'>Название</th>
+                <th className='table__title'>Количество</th>
+                <th className='table__title'>Расстояние</th>
+              </tr>
+              {list}
+            </tbody>
+          </table>
+        </div>
+      );
+  }
 };
 
 export default Table;

@@ -1,9 +1,30 @@
-table, th, td {
-  border:1px solid black;
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.table-container {
+  width: 100%;
 }
 
 .table {
   margin: 0 auto;
+  border-collapse: separate;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 5px black;
+  background-color: rgb(30, 30, 30);
+  width: 100%;
+
+  &__title {
+    color: wheat;
+    padding: 8px 0px;
+  }
+  &__item {
+    color: #c5c5c5;
+    padding: 3px 0px;
+  }
 }
 
 .list-group {

@@ -1,0 +1,40 @@
+// ========================================================
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+// EXAMPLE pseudo ===========>
+// div::after {
+//   @include pseudo;
+//   top: -1rem; left: -1rem;
+//   width: 1rem; height: 1rem;
+// }
+
+// ========================================================
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+// margin left margin right center :)
+
+// ========================================================
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + '%');
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+// EXAMPLE responsive ratio ===========>
+// div {
+//   @include responsive-ratio(16,9);
+// }
+// ========================================================
