@@ -21,7 +21,7 @@ const SearchSelects = ({ setColumnsFilter, setConditionFilter }) => {
       <select
         onChange={(e) => setColumnsFilter(e.target.value)}
         defaultValue='default'
-        className='search-panel__select input-style'
+        className='search-panel__select input-style select-style'
         name='columns'
         id='columns'
       >
@@ -37,7 +37,7 @@ const SearchSelects = ({ setColumnsFilter, setConditionFilter }) => {
       <select
         onChange={(e) => setConditionFilter(e.target.value)}
         defaultValue='default'
-        className='search-panel__select input-style'
+        className='search-panel__select input-style select-style'
         name='condition'
         id='condition'
       >

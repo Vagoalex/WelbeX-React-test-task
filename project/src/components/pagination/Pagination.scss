@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .pagination-container {
   width: 100%;
   margin: 30px auto 0 auto;
@@ -11,6 +13,8 @@
 .pagination-list__item {
   margin-bottom: 28px;
   margin-left: 23px;
+  transition: 0.5s ease;
+
   .pagination-list-link {
     font-weight: 700;
     padding: 5px 10px;
@@ -27,10 +31,20 @@
       border: 1px solid rgba(191, 191, 191, 0.8);
       animation: pulse-border 1.5s ease-in-out 0.5s infinite;
     }
+    @media (max-width: $mediaPhones) {
+      padding: 5px 7px;
+    }
+    @media (max-width: $mediaSmallPhones) {
+      padding: 3px 6px;
+    }
   }
 
   &:first-child {
     margin-left: 0;
+  }
+
+  @media (max-width: $mediaSmallTablets) {
+    margin-left: 10px;
   }
 }
 
