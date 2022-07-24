@@ -8,7 +8,7 @@ import Pagination from '../pagination/Pagination';
 import sortData from '../../helpers/sortData';
 import './App.scss';
 
-const URL = 'https://welbex-test-task-project.herokuapp.com/api';
+const URL = 'http://localhost:5000';
 // const url = 'http://localhost:3000';
 
 function App() {

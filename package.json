@@ -2,7 +2,6 @@
   "name": "vago-welbex-react-test-task",
   "version": "0.1.0",
   "private": true,
-  "homepage": "  https://vagoalex.github.io/WelbeX-React-test-task",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -17,16 +16,12 @@
     "sass": "^1.53.0",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
   "scripts": {
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "server": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
