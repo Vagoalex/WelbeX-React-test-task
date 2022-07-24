@@ -1,4 +1,7 @@
 .html-spinner-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
 }
 
 #html-spinner {
@@ -9,8 +12,7 @@
   border-radius: 50%;
 }
 
-#html-spinner,
-#svg-spinner {
+#html-spinner {
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1.2s;
   -webkit-animation-name: rotate;
@@ -56,13 +58,3 @@
     transform: rotate(360deg);
   }
 }
-
-// #html-spinner {
-//   position: absolute;
-//   top: 80px;
-//   margin-left: -24px;
-// }
-
-// #html-spinner {
-//   left: 25%;
-// }

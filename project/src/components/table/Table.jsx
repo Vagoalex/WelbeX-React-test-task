@@ -5,7 +5,7 @@ import './Table.scss';
 const Table = ({ data, process }) => {
   // eslint-disable-next-line default-case
   switch (process) {
-    case 'loading':
+    case 'loading' || 'waiting':
       return <Spinner />;
     case 'error':
       return <ErrorMessage />;
@@ -26,7 +26,7 @@ const Table = ({ data, process }) => {
       const list = renderList();
 
       return (
-        <div className='table-container'>
+        <section className='table-container'>
           <table className='table'>
             <tbody>
               <tr>
@@ -38,7 +38,7 @@ const Table = ({ data, process }) => {
               {list}
             </tbody>
           </table>
-        </div>
+        </section>
       );
   }
 };

@@ -1,21 +1,16 @@
-.table-pagination {
-  display: flex;
-  margin: 0 auto;
-  width: 50px;
-  margin-top: 10px;
-}
-
 .pagination-container {
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
 }
 
 .pagination-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
 }
 .pagination-list__item {
+  margin-bottom: 28px;
+  margin-left: 23px;
   .pagination-list-link {
     font-weight: 700;
     padding: 5px 10px;
@@ -32,6 +27,10 @@
       border: 1px solid rgba(191, 191, 191, 0.8);
       animation: pulse-border 1.5s ease-in-out 0.5s infinite;
     }
+  }
+
+  &:first-child {
+    margin-left: 0;
   }
 }
 
