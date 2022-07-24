@@ -3,7 +3,7 @@ import { useState } from 'react';
 const columns = [
   { name: 'name', text: 'Название' },
   { name: 'quantity', text: 'Количество' },
-  { name: 'distance', text: 'Дистанция' },
+  { name: 'distance', text: 'Расстояние' },
 ];
 const condition = [
   { name: 'equal', text: 'Равно' },
@@ -26,7 +26,7 @@ const SearchSelects = ({ setColumnsFilter, setConditionFilter }) => {
         id='columns'
       >
         <option value='default' className='search-panel-option--default'>
-          По названию
+          По колонкам
         </option>
         {columnsData.map(({ name, text }) => (
           <option key={name} value={name}>
