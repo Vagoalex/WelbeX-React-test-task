@@ -1,8 +1,14 @@
-# Тестовое задание на ReactJS для компании WelbeX
+# Как запустить приложуху
 
-## Клонируем репо
+#### _Моя версия ноды v16.15.1_
 
-## Открываем папку в директории /project и пишем
+## Клонируем репо в терминале в IDE
+
+```
+git clone https://github.com/Vagoalex/WelbeX-React-test-task
+```
+
+## Устанавливаем зависимости
 
 ```
 npm install
@@ -14,15 +20,9 @@ npm install
 npm start
 ```
 
-#### Моя версия ноды v16.15.1
+---
 
-[> Ссылка на деплой <](https://vagoalex.github.io/WelbeX-React-test-task/)
+## Пояснения:
 
-[> Ссылка на тестовое <](https://faint-adasaurus-4bc.notion.site/web-React-js-22257203622947f8879c527bf8ed0f48)
-
-### Коротко о задании:
-
-![задание ч.1](./project/src/assets/task/task-1.jpg)
-![задание ч.2](./project/src/assets/task/task-2.jpg)
-
-#### _Макета не было, дизайн был придуман полностью мной_
+- ### Проект работает на "json-server" для замены базе данных, наподобие postgreSQL, так как нет знаний в базах данных, камон, я же фронт :))
+- ### В скрипте _npm start_ используется "concurrently" и автоматически подрубается сервак
