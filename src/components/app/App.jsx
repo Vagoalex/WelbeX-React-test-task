@@ -8,6 +8,9 @@ import Pagination from '../pagination/Pagination';
 import sortData from '../../helpers/sortData';
 import './App.scss';
 
+const URL = 'https://welbex-test-task-project.herokuapp.com/api';
+// const url = 'http://localhost:3000';
+
 function App() {
   const { request, process, setProcess } = useHttp();
 
@@ -50,7 +53,7 @@ function App() {
   };
 
   useEffect(() => {
-    request('http://localhost:4000/data')
+    request(`${URL}/data`)
       .then(setData)
       .then(() => setProcess('confirmed'));
 
