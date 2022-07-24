@@ -1,0 +1,21 @@
+.table-pagination {
+  display: flex;
+  margin: 0 auto;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.pagination-container {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+}
+
+.pagination-list-link {
+  color: black;
+  margin-left: 10px;
+}
