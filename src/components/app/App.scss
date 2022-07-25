@@ -1,7 +1,7 @@
 @import '../../style/variables.scss';
 
 .App {
-  padding: 50px;
+  padding: 50px 0px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -24,11 +24,11 @@
     font-size: 12px;
   }
   @media (max-width: $mediaPhones) {
-    width: 330px;
-    font-size: 12px;
+    width: 345px;
+    font-size: 13px;
   }
-  @media (max-width: $mediaPhones) {
-    width: 290px;
+  @media (max-width: $mediaSmallPhones) {
+    width: 265px;
     font-size: 10px;
   }
 }
