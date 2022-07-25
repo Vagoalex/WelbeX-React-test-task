@@ -40,9 +40,9 @@ function App() {
           return lowerName.indexOf(lowerTerm) > -1;
         });
       case 'more':
-        return items.sort((a, b) => sortData(a, b, activeFilter));
+        return items.sort((a, b) => a[activeFilter] - b[activeFilter]);
       case 'less':
-        return items.sort((a, b) => sortData(a, b, activeFilter));
+        return items.sort((a, b) => b[activeFilter] - a[activeFilter]);
 
       default:
         return items;
