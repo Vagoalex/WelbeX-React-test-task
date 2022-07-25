@@ -16,7 +16,7 @@ npm start
 
 #### Моя версия ноды v16.15.1
 
-[> Ссылка на деплой <](https://vagoalex.github.io/WelbeX-React-test-task/)
+[> Ссылка на деплой <](https://welbex-test-task-project.herokuapp.com/)
 
 [> Ссылка на тестовое <](https://faint-adasaurus-4bc.notion.site/web-React-js-22257203622947f8879c527bf8ed0f48)
 
